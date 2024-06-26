@@ -7,7 +7,7 @@ server.get('/', async (request, reply) => {
     return {hello: 'world'}
 })
 
-server.listen({ port: +process.env.APP_PORT || 9000 }, (err, address) => {
+server.listen({ port: +process.env.APP_PORT || 9000, host: '0.0.0.0' }, (err, address) => {
     if (err) {
         console.error(err)
         process.exit(1)
